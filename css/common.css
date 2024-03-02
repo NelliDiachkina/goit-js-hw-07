@@ -1,0 +1,105 @@
+:root {
+  --white: #fff;
+  --blue: #4e75ff;
+  --black: #2e2f42;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 16px;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+/* Reset styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* task-2 */
+
+.gallery {
+  max-width: 1128px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 48px 24px;
+}
+
+.gallery img {
+  max-width: 360px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* task-5 */
+
+.widget {
+  margin: 50px auto;
+  max-width: 345px;
+  padding: 100px 88px;
+  border-radius: 8px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.color {
+  display: block;
+}
+
+.change-color {
+  min-width: 148px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: var(--blue);
+  color: var(--white);
+}
