@@ -3,16 +3,21 @@ const boxesContainer = document.querySelector('#boxes');
 const destroyButton = document.querySelector('button[data-destroy]');
 const createButton = document.querySelector('button[data-create]');
 
-destroyButton.addEventListener('click', destroyBoxes);
+destroyButton.addEventListener('click', handlerClick);
+createButton.addEventListener('click', handlerClick);
 
-createButton.addEventListener('click', () => {
-  destroyBoxes();
-  const amount = Number(inputNumber.value);
-  if (amount >= 1 && amount <= 100) {
-    createBoxes(amount);
+function handlerClick(e) {
+  if (e.currentTarget.dataset.create !== undefined) {
+    destroyBoxes();
+    const amount = Number(inputNumber.value);
+    if (amount >= 1 && amount <= 100) {
+      createBoxes(amount);
+    }
+    inputNumber.value = '';
+  } else {
+    destroyBoxes();
   }
-  inputNumber.value = '';
-});
+}
 
 function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1) {

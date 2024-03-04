@@ -1,7 +1,11 @@
 :root {
   --white: #fff;
-  --blue: #4e75ff;
   --black: #2e2f42;
+  --blue: #4e75ff;
+  --blue-hover: #6c8cff;
+  --red: #ff4e4e;
+  --red-hover: #ff7070;
+  --item-background-color: #f6f6fe;
 }
 
 * {
@@ -20,7 +24,7 @@ body {
   letter-spacing: 0.04em;
 }
 
-/* Reset styles */
+/* Reset-Base styles */
 
 h1,
 h2,
@@ -44,12 +48,26 @@ a {
   color: currentColor;
 }
 
+button,
+input {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
 button {
   cursor: pointer;
   border: none;
   outline: none;
-  font-family: inherit;
-  font-size: inherit;
+}
+
+input {
+  color: currentColor;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
 }
 
 img {
@@ -58,22 +76,115 @@ img {
   height: auto;
 }
 
+/* task-1 */
+
+#categories {
+  max-width: 440px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.item {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--item-background-color);
+}
+
+.item > h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.item > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item > ul > li {
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding: 8px 16px;
+}
+
 /* task-2 */
 
 .gallery {
-  max-width: 1128px;
-  margin: 0 auto;
+  max-width: 1440px;
+  padding: 100px 140px;
+  margin: 10px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 48px 24px;
+  background: #fff;
 }
 
-.gallery img {
+.gallery li {
   max-width: 360px;
   height: 300px;
+}
+
+.gallery li > img {
+  height: 100%;
   object-fit: cover;
+}
+
+/* task-3 */
+
+#name-input {
+  margin-top: 10px;
+  min-width: 360px;
+}
+
+h1 {
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+/* task-4 */
+
+.login-form {
+  max-width: 408px;
+  margin: 10px auto;
+  padding: 24px;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.login-form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-form label:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.login-form button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: var(--blue);
+  color: var(--white);
+  min-width: 86px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-form button:hover {
+  background-color: var(--blue-hover);
 }
 
 /* task-5 */
@@ -100,6 +211,65 @@ img {
   padding: 8px 16px;
   border-radius: 8px;
   font-weight: 500;
-  background: var(--blue);
+  background-color: var(--blue);
   color: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.change-color:hover {
+  background-color: var(--blue-hover);
+}
+
+/* task-6 */
+
+#controls {
+  max-width: 486px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  gap: 16px;
+  border-radius: 8px;
+  background-color: var(--item-background-color);
+}
+#controls input {
+  padding: 8px;
+  border-radius: 8px;
+  min-width: 150px;
+  text-align: center;
+}
+
+#controls button {
+  min-width: 120px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--white);
+  line-height: 1.5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#controls button[data-create] {
+  background-color: var(--blue);
+}
+
+#controls button[data-create]:hover {
+  background-color: var(--blue-hover);
+}
+
+#controls button[data-destroy] {
+  background-color: var(--red);
+}
+
+#controls button[data-destroy]:hover {
+  background-color: var(--red-hover);
+}
+
+#boxes {
+  border-radius: 8px;
+  background-color: var(--item-background-color);
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 32px;
 }
