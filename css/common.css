@@ -70,12 +70,6 @@ input {
   border: 1px solid #808080;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 /* task-1 */
 
 #categories {
@@ -128,13 +122,10 @@ img {
   background: #fff;
 }
 
-.gallery li {
-  max-width: 360px;
-  height: 300px;
-}
-
 .gallery li > img {
-  height: 100%;
+  display: block;
+  width: 360px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -227,11 +218,13 @@ h1 {
   margin: 10px auto;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 32px;
   gap: 16px;
   border-radius: 8px;
   background-color: var(--item-background-color);
 }
+
 #controls input {
   padding: 8px;
   border-radius: 8px;
