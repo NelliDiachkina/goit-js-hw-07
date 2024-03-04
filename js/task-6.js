@@ -14,7 +14,8 @@ function handlerClick(e) {
       createBoxes(amount);
     }
     inputNumber.value = '';
-  } else {
+  }
+  if (e.currentTarget.dataset.destroy !== undefined) {
     destroyBoxes();
   }
 }
