@@ -124,8 +124,8 @@ input {
 
 .gallery li > img {
   display: block;
-  width: 360px;
-  height: 300px;
+  max-width: 360px;
+  min-height: 240px;
   object-fit: cover;
 }
 
