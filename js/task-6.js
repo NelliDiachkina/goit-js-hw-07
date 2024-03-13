@@ -21,13 +21,17 @@ function handlerClick(e) {
 }
 
 function createBoxes(amount) {
+  const fragment = document.createDocumentFragment();
+
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div');
     box.style.width = `${30 + i * 10}px`;
     box.style.height = `${30 + i * 10}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxesContainer.append(box);
+    fragment.append(box);
   }
+
+  boxesContainer.append(fragment);
 }
 
 function destroyBoxes() {
